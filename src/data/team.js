@@ -9,7 +9,7 @@ export const teamMembers = [
       'Участник международных конференций по косметологии',
       'Автор статей в профессиональных изданиях',
     ],
-    photo: '/images/cropped-teenage-girl-lifestyle-concept_23-2148093929.jpg', // Updated to local path
+    photo: process.env.PUBLIC_URL + '/images/cropped-teenage-girl-lifestyle-concept_23-2148093929.jpg',
   },
   {
     id: 2,
@@ -21,8 +21,7 @@ export const teamMembers = [
       'Владеет всеми видами аппаратного маникюра',
       'Постоянно повышает квалификацию',
     ],
-    photo:
-      '/images/portrait-blonde-surprised-mature-woman-isolated-white-backdrop_23-2148043545.jpg', // Updated to local path
+    photo: process.env.PUBLIC_URL + '/images/portrait-blonde-surprised-mature-woman-isolated-white-backdrop_23-2148043545.jpg',
   },
   {
     id: 3,
@@ -34,7 +33,6 @@ export const teamMembers = [
       'Имеет медицинское образование',
       'Индивидуальный подход к каждому клиенту',
     ],
-    photo:
-      '/images/young-brunette-woman-cozy-winter-clothes_273609-41786.jpg', // Updated to local path
+    photo: process.env.PUBLIC_URL + '/images/young-brunette-woman-cozy-winter-clothes_273609-41786.jpg',
   },
 ];

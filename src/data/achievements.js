@@ -2,17 +2,17 @@ export const certificates = [
   {
     id: 1,
     title: 'Сертификат специалиста по косметологии',
-    image: '/images/hand-drawn-make-up-beauty-salon-gift-certificate_23-2149633103.jpg', // Updated to local path
+    image: process.env.PUBLIC_URL + '/images/hand-drawn-make-up-beauty-salon-gift-certificate_23-2149633103.jpg',
   },
   {
     id: 2,
     title: 'Сертификат о прохождении курса массажа',
-    image: '/images/abstract-monocolor-fashion-certificate-template_23-2148891758.jpg', // Updated to local path
+    image: process.env.PUBLIC_URL + '/images/abstract-monocolor-fashion-certificate-template_23-2148891758.jpg',
   },
   {
     id: 3,
     title: 'Сертификат по аппаратному маникюру',
-    image: '/images/fashion-training-course-certificate-template-design_742173-4930.jpg', // Updated to local path
+    image: process.env.PUBLIC_URL + '/images/fashion-training-course-certificate-template-design_742173-4930.jpg',
   },
 ];
 
@@ -33,11 +33,11 @@ export const partnerships = [
   {
     id: 1,
     name: 'Professional Cosmetics Brand A',
-    logo: '/images/brand_a.png', // Updated to local path
+    logo: process.env.PUBLIC_URL + '/images/brand_a.png',
   },
   {
     id: 2,
     name: 'Leading Equipment Supplier B',
-    logo: '/images/brand_b.png', // Updated to local path
+    logo: process.env.PUBLIC_URL + '/images/brand_b.png',
   },
 ];

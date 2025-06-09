@@ -24,7 +24,7 @@ export const products = [
       'Мощная сыворотка с высокой концентрацией стабильного витамина С. Борется с тусклостью, пигментацией и первыми признаками старения. Придает коже сияние и выравнивает тон. Легкая текстура быстро впитывается, подходит для ежедневного использования.',
     composition:
       'Aqua, Sodium Ascorbyl Phosphate, Glycerin, Ferulic Acid, Tocopherol, Hyaluronic Acid, Phenoxyethanol, Ethylhexylglycerin.',
-    image: '/images/photo-1746904305806-a9ce08b33dc2.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1746904305806-a9ce08b33dc2.jpg',
     similarProducts: [1, 4],
   },
   {
@@ -38,7 +38,7 @@ export const products = [
       'Деликатный гель для умывания, который эффективно удаляет загрязнения и макияж, не нарушая естественный pH баланс кожи. Содержит экстракты ромашки и зеленого чая для успокаивающего эффекта. Подходит для всех типов кожи, включая чувствительную.',
     composition:
       'Aqua, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Glycerin, Camellia Sinensis Leaf Extract, Chamomilla Recutita (Matricaria) Flower Extract, Sodium Chloride, Citric Acid, Phenoxyethanol, Ethylhexylglycerin, Parfum.',
-    image: '/images/photo-1629198735660-e39ea93f5c18.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1629198735660-e39ea93f5c18.jpg',
     similarProducts: [1, 5],
   },
   {
@@ -52,7 +52,7 @@ export const products = [
       'Освежающий лосьон, который восстанавливает pH кожи после умывания и подготавливает ее к нанесению последующих средств. Содержит цветочные воды и пантенол для увлажнения и тонизирования. Не содержит спирт.',
     composition:
       'Aqua, Rosa Damascena Flower Water, Glycerin, Panthenol, Sodium PCA, Allantoin, Phenoxyethanol, Ethylhexylglycerin, Parfum.',
-    image: '/images/photo-1629198726018-604230bdb091.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1629198726018-604230bdb091.jpg',
     similarProducts: [2, 5],
   },
   {
@@ -66,7 +66,7 @@ export const products = [
       'Маска на основе глины, которая эффективно абсорбирует излишки себума и загрязнения из пор, матирует кожу и улучшает ее текстуру. Содержит салициловую кислоту для борьбы с воспалениями и экстракт мяты для освежающего эффекта.',
     composition:
       'Aqua, Kaolin, Bentonite, Glycerin, Glyceryl Stearate, PEG-100 Stearate, Salicylic Acid, Mentha Piperita (Peppermint) Leaf Extract, Phenoxyethanol, Ethylhexylglycerin, Parfum.',
-    image: '/images/photo-1747858989102-cca0f4dc4a11.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1747858989102-cca0f4dc4a11.jpg',
     similarProducts: [3, 4],
   },
   {
@@ -80,7 +80,7 @@ export const products = [
       'Легкий солнцезащитный крем с максимальной степенью защиты SPF 50. Эффективно блокирует UVA и UVB лучи, предотвращая фотостарение и появление пигментации. Быстро впитывается, не оставляя белых следов и жирного блеска. Подходит для всех типов кожи, включая чувствительную. Водостойкая формула.',
     composition:
       'Aqua, Zinc Oxide, Titanium Dioxide, Ethylhexyl Methoxycinnamate, Butyl Methoxydibenzoylmethane, Glycerin, C12-15 Alkyl Benzoate, Cetearyl Alcohol, Glyceryl Stearate, PEG-100 Stearate, Tocopheryl Acetate, Xanthan Gum, Phenoxyethanol, Ethylhexylglycerin.',
-    image: '/images/photo-1728977598879-81ec063c5427.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1728977598879-81ec063c5427.jpg',
     similarProducts: [1, 2],
   },
 ];

@@ -11,7 +11,7 @@ const HeroSection = () => {
       className="hero-section relative min-h-[60vh] md:min-h-[80vh] flex items-center justify-center text-center px-4 -mt-14 md:-mt-16"
       data-testid="hero-section"
       style={{
-        backgroundImage: "url('/images/hero/home.jpg')",
+        backgroundImage: `url(${process.env.PUBLIC_URL + '/images/hero/home.jpg'})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

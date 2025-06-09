@@ -7,7 +7,7 @@ export const services = [
     duration: '60 мин',
     description:
       'Глубокая очищающая процедура для всех типов кожи. Включает демакияж, очищение, эксфолиацию и увлажнение.',
-    image: '/images/photo-1570172619644-dfd03ed5d881.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1570172619644-dfd03ed5d881.jpg',
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const services = [
     price: 2500,
     duration: '45 мин',
     description: 'Расслабляющий массаж для омоложения кожи. Улучшает кровообращение и тонус кожи.',
-    image: '/images/photo-1512290923902-8a9f81dc236c.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1512290923902-8a9f81dc236c.jpg',
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const services = [
     price: 2000,
     duration: '60 мин',
     description: 'Классический маникюр с обработкой кутикулы и покрытием лаком.',
-    image: '/images/photo-1632345031435-8727f6897d53.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1632345031435-8727f6897d53.jpg',
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ export const services = [
     price: 2500,
     duration: '90 мин',
     description: 'Полный уход за стопами и ногтями. Включает обработку кутикулы и покрытие лаком.',
-    image: '/images/photo-1632345031435-8727f6897d53.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1632345031435-8727f6897d53.jpg',
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ export const services = [
     price: 3500,
     duration: '60 мин',
     description: 'Расслабляющий массаж всего тела. Снимает напряжение и улучшает кровообращение.',
-    image: '/images/photo-1512290923902-8a9f81dc236c.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1512290923902-8a9f81dc236c.jpg',
   },
   {
     id: 6,
@@ -52,7 +52,7 @@ export const services = [
     price: 2800,
     duration: '45 мин',
     description: 'Глубокое очищение и обновление кожи лица. Подходит для всех типов кожи.',
-    image: '/images/photo-1570172619644-dfd03ed5d881.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1570172619644-dfd03ed5d881.jpg',
   },
   {
     id: 7,
@@ -62,7 +62,7 @@ export const services = [
     duration: '60 мин',
     description:
       'Профессиональный макияж для любого случая. Подбор оттенков под ваш тип внешности.',
-    image: '/images/photo-1512290923902-8a9f81dc236c.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1512290923902-8a9f81dc236c.jpg',
   },
   {
     id: 8,
@@ -71,7 +71,7 @@ export const services = [
     price: 3500,
     duration: '120 мин',
     description: 'Наращивание ресниц поресничным методом. Объем и длина на ваш выбор.',
-    image: '/images/photo-1632345031435-8727f6897d53.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1632345031435-8727f6897d53.jpg',
   },
   {
     id: 9,
@@ -80,7 +80,7 @@ export const services = [
     price: 1500,
     duration: '30 мин',
     description: 'Коррекция и окрашивание бровей. Создание идеальной формы.',
-    image: '/images/photo-1570172619644-dfd03ed5d881.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1570172619644-dfd03ed5d881.jpg',
   },
   {
     id: 10,
@@ -89,7 +89,7 @@ export const services = [
     price: 4500,
     duration: '90 мин',
     description: 'Комплексный уход за телом с использованием профессиональной косметики.',
-    image: '/images/photo-1512290923902-8a9f81dc236c.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1512290923902-8a9f81dc236c.jpg',
   },
   {
     id: 11,
@@ -98,7 +98,7 @@ export const services = [
     price: 2500,
     duration: '60 мин',
     description: 'Профессиональная укладка волос любой длины. Создание идеального образа.',
-    image: '/images/photo-1632345031435-8727f6897d53.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1632345031435-8727f6897d53.jpg',
   },
   {
     id: 12,
@@ -107,7 +107,7 @@ export const services = [
     price: 4000,
     duration: '120 мин',
     description: 'Профессиональное окрашивание волос. Подбор идеального оттенка.',
-    image: '/images/photo-1570172619644-dfd03ed5d881.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1570172619644-dfd03ed5d881.jpg',
   },
   {
     id: 13,
@@ -116,7 +116,7 @@ export const services = [
     price: 2000,
     duration: '60 мин',
     description: 'Стрижка любой сложности. Создание идеальной формы.',
-    image: '/images/photo-1512290923902-8a9f81dc236c.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1512290923902-8a9f81dc236c.jpg',
   },
   {
     id: 14,
@@ -125,7 +125,7 @@ export const services = [
     price: 4000,
     duration: '90 мин',
     description: 'Комплексный уход за лицом с использованием профессиональной косметики.',
-    image: '/images/photo-1632345031435-8727f6897d53.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1632345031435-8727f6897d53.jpg',
   },
   {
     id: 15,
@@ -134,7 +134,7 @@ export const services = [
     price: 2000,
     duration: '30 мин',
     description: 'Расслабляющий массаж головы и шеи. Снимает напряжение и стресс.',
-    image: '/images/photo-1570172619644-dfd03ed5d881.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1570172619644-dfd03ed5d881.jpg',
   },
 ];
 

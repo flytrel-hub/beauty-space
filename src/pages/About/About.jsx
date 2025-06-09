@@ -20,7 +20,13 @@ const About = () => {
         canonicalUrl="https://beauty-salon.ru/about"
       />
       <div className="about-page">
-        <div className="about-hero">
+        <div className="about-hero" 
+          style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL + '/images/hero/about.jpg'})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
           <h1>О нашем салоне</h1>
           <p>Мы создаем красоту и комфорт с 2010 года</p>
         </div>

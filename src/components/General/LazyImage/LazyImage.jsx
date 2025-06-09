@@ -26,7 +26,7 @@ const LazyImage = ({ src, alt, className, width, height }) => {
         </div>
       )}
       <img
-        src={error ? '/images/placeholder.jpg' : src}
+        src={error ? process.env.PUBLIC_URL + '/images/placeholder.jpg' : src}
         alt={alt}
         className={`lazy-image ${isLoaded ? 'loaded' : ''}`}
         loading="lazy"

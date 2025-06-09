@@ -5,7 +5,7 @@ const SEO = ({
   title, 
   description, 
   keywords, 
-  ogImage = '/images/og-image.jpg',
+  ogImage = process.env.PUBLIC_URL + '/images/og-image.jpg',
   ogType = 'website',
   canonicalUrl
 }) => {

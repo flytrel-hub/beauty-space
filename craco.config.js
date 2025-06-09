@@ -1,6 +1,5 @@
 const path = require('path');
 
-
 module.exports = {
   webpack: {
     alias: {
@@ -11,11 +10,11 @@ module.exports = {
       '@assets': path.resolve(__dirname, 'src/assets')
     },
     configure: (webpackConfig) => {
+      // Настройка для HashRouter и GitHub Pages
+      webpackConfig.output.publicPath = process.env.NODE_ENV === 'production' 
+        ? '/beauty-space/'
+        : '/';
 
-
-      // Настройка для HashRouter
-      webpackConfig.output.publicPath = '';
-      
       // Настройка для статических файлов
       webpackConfig.module.rules.push({
         test: /\.(png|jpe?g|gif|svg|ico)$/i,
@@ -24,6 +23,35 @@ module.exports = {
           filename: 'static/media/[name].[hash][ext]'
         }
       });
+
+      // Добавляем плагин для копирования статических файлов
+      const CopyWebpackPlugin = require('copy-webpack-plugin');
+      webpackConfig.plugins.push(
+        new CopyWebpackPlugin({
+          patterns: [
+            {
+              from: 'public/images',
+              to: 'images',
+              noErrorOnMissing: true
+            },
+            {
+              from: 'public/favicon.ico',
+              to: 'favicon.ico',
+              noErrorOnMissing: true
+            },
+            {
+              from: 'public/logo192.png',
+              to: 'logo192.png',
+              noErrorOnMissing: true
+            },
+            {
+              from: 'public/logo512.png',
+              to: 'logo512.png',
+              noErrorOnMissing: true
+            }
+          ]
+        })
+      );
 
       // Оптимизация разделения кода
       webpackConfig.optimization = {
@@ -43,7 +71,6 @@ module.exports = {
         }
         return minimizer;
       });
-
 
       return webpackConfig;
     },
