@@ -10,7 +10,7 @@ export const products = [
       'Этот интенсивный увлажняющий крем специально разработан для сухой и обезвоженной кожи. Он обеспечивает глубокое питание и восстановление липидного барьера, делая кожу мягкой и эластичной. Содержит комплекс гиалуроновой кислоты и натуральных масел.',
     composition:
       'Aqua, Glycerin, Butyrospermum Parkii (Shea) Butter, Caprylic/Capric Triglyceride, Cetearyl Alcohol, Glyceryl Stearate, PEG-100 Stearate, Sodium Hyaluronate, Argania Spinosa Kernel Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Tocopheryl Acetate, Panthenol, Allantoin, Carbomer, Sodium Hydroxide, Phenoxyethanol, Ethylhexylglycerin, Parfum.',
-    image: '/images/photo-1608248597279-f99d160bfcbc.jpg',
+    image: process.env.PUBLIC_URL + '/images/photo-1608248597279-f99d160bfcbc.jpg',
     similarProducts: [2, 3],
   },
   {
