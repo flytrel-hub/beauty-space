@@ -1,11 +1,10 @@
 {
   "files": {
-    "main.css": "/beauty-space/static/css/main.b7f6b7e9.css",
-    "main.js": "/beauty-space/static/js/main.8eb96b75.js",
+    "main.css": "/beauty-space/static/css/main.1a1f5b2c.css",
+    "main.js": "/beauty-space/static/js/main.10cc809e.js",
     "static/js/977.96cd72f3.chunk.js": "/beauty-space/static/js/977.96cd72f3.chunk.js",
     "static/js/455.f959b438.chunk.js": "/beauty-space/static/js/455.f959b438.chunk.js",
     "images/hero/about.jpg": "/beauty-space/images/hero/about.jpg",
-    "static/media/about.jpg": "/beauty-space/static/media/about.9105c0b4fbe0de59b0f6.jpg",
     "images/hero/home.jpg": "/beauty-space/images/hero/home.jpg",
     "images/photo-1570172619644-dfd03ed5d881.jpg": "/beauty-space/images/photo-1570172619644-dfd03ed5d881.jpg",
     "images/photo-1629198735660-e39ea93f5c18.jpg": "/beauty-space/images/photo-1629198735660-e39ea93f5c18.jpg",
@@ -28,13 +27,13 @@
     "images/photo-1746904305806-a9ce08b33dc2.jpg": "/beauty-space/images/photo-1746904305806-a9ce08b33dc2.jpg",
     "favicon.ico": "/beauty-space/favicon.ico",
     "index.html": "/beauty-space/index.html",
-    "main.b7f6b7e9.css.map": "/beauty-space/static/css/main.b7f6b7e9.css.map",
-    "main.8eb96b75.js.map": "/beauty-space/static/js/main.8eb96b75.js.map",
+    "main.1a1f5b2c.css.map": "/beauty-space/static/css/main.1a1f5b2c.css.map",
+    "main.10cc809e.js.map": "/beauty-space/static/js/main.10cc809e.js.map",
     "977.96cd72f3.chunk.js.map": "/beauty-space/static/js/977.96cd72f3.chunk.js.map",
     "455.f959b438.chunk.js.map": "/beauty-space/static/js/455.f959b438.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7f6b7e9.css",
-    "static/js/main.8eb96b75.js"
+    "static/css/main.1a1f5b2c.css",
+    "static/js/main.10cc809e.js"
   ]
 }
