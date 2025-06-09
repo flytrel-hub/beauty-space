@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/beauty-space/static/css/main.bf0ccb5e.css",
+    "main.js": "/beauty-space/static/js/main.ee295a85.js",
+    "static/js/977.96cd72f3.chunk.js": "/beauty-space/static/js/977.96cd72f3.chunk.js",
+    "static/js/455.f959b438.chunk.js": "/beauty-space/static/js/455.f959b438.chunk.js",
+    "static/media/about.jpg": "/beauty-space/static/media/about.9105c0b4fbe0de59b0f6.jpg",
+    "index.html": "/beauty-space/index.html",
+    "main.bf0ccb5e.css.map": "/beauty-space/static/css/main.bf0ccb5e.css.map",
+    "main.ee295a85.js.map": "/beauty-space/static/js/main.ee295a85.js.map",
+    "977.96cd72f3.chunk.js.map": "/beauty-space/static/js/977.96cd72f3.chunk.js.map",
+    "455.f959b438.chunk.js.map": "/beauty-space/static/js/455.f959b438.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf0ccb5e.css",
+    "static/js/main.ee295a85.js"
+  ]
+}
