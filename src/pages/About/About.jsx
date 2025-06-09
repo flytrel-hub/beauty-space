@@ -22,9 +22,7 @@ const About = () => {
       <div className="about-page">
         <div className="about-hero" 
           style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL + '/images/hero/about.jpg'})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundImage: `url(${process.env.PUBLIC_URL + '/images/hero/about.jpg'})`
           }}
         >
           <h1>О нашем салоне</h1>
