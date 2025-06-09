@@ -1,70 +1,184 @@
-# Getting Started with Create React App
+# 🎨 BeautySpace - Современный сайт косметического салона
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-18.2.0-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.0-38B2AC)
+![SCSS](https://img.shields.io/badge/SCSS-1.89.1-CC6699)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-## Available Scripts
+## 📋 Содержание
+- [О проекте](#-о-проекте)
+- [Технологический стек](#-технологический-стек)
+- [Структура проекта](#-структура-проекта)
+- [Установка и запуск](#-установка-и-запуск)
+- [Основные функции](#-основные-функции)
+- [Компоненты](#-компоненты)
+- [Стилизация](#-стилизация)
+- [Тестирование](#-тестирование)
+- [Оптимизация](#-оптимизация)
+- [Лицензия](#-лицензия)
 
-In the project directory, you can run:
+## 🎯 О проекте
 
-### `npm start`
+BeautySpace - это современный многостраничный сайт для косметического салона, разработанный с использованием React и современных веб-технологий. Проект представляет собой статический сайт с фокусом на пользовательский опыт и визуальную привлекательность.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Основные цели проекта:
+- Создание современного и привлекательного интерфейса
+- Обеспечение удобной навигации по услугам и каталогу
+- Предоставление информации о салоне и команде
+- Упрощение процесса связи с клиентами
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Технологический стек
 
-### `npm test`
+### Основные технологии:
+- **React 18.2.0** - Основной фреймворк
+- **React Router 6.22.3** - Маршрутизация
+- **Tailwind CSS 3.3.0** - Утилитарные классы
+- **SCSS 1.89.1** - Препроцессор стилей
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Дополнительные библиотеки:
+- **Framer Motion 12.16.0** - Анимации
+- **React Hook Form 7.57.0** - Работа с формами
+- **React Icons 5.5.0** - Иконки
+- **Swiper 11.2.8** - Слайдеры
+- **React Helmet Async 2.0.5** - SEO оптимизация
 
-### `npm run build`
+## 📁 Структура проекта
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+beauty-space/
+├── public/
+│   ├── images/          # Изображения
+│   └── favicon.ico      # Иконка сайта
+├── src/
+│   ├── components/      # React компоненты
+│   ├── pages/          # Страницы приложения
+│   ├── styles/         # Глобальные стили
+│   ├── data/           # Данные (услуги, товары)
+│   └── core/           # Ядро приложения
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Основные директории:
+- **components/** - Переиспользуемые компоненты
+- **pages/** - Компоненты страниц
+- **styles/** - Глобальные стили и переменные
+- **data/** - Моковые данные
+- **core/** - Основная логика приложения
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Установка и запуск
 
-### `npm run eject`
+1. Клонируйте репозиторий:
+```bash
+git clone https://github.com/flytrel-hub/beauty-space.git
+cd beauty-space
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Установите зависимости:
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Запустите проект:
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Для сборки проекта:
+```bash
+npm run build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ✨ Основные функции
 
-## Learn More
+### Страницы:
+- 🏠 **Главная** - Приветствие и основные услуги
+- 💅 **Услуги** - Каталог услуг с ценами
+- 🛍️ **Каталог** - Косметические товары
+- 👥 **О нас** - Информация о салоне
+- 📞 **Контакты** - Связь с салоном
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Особенности:
+- Адаптивный дизайн
+- Анимации и переходы
+- Модальные окна
+- Формы обратной связи
+- Галереи изображений
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🧩 Компоненты
 
-### Code Splitting
+### Общие компоненты:
+- `Header` - Навигация
+- `Footer` - Информация и контакты
+- `Modal` - Модальные окна
+- `LoadingSpinner` - Индикатор загрузки
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Специализированные компоненты:
+- `ServiceCard` - Карточка услуги
+- `ProductCard` - Карточка товара
+- `ContactForm` - Форма обратной связи
+- `Gallery` - Галерея изображений
 
-### Analyzing the Bundle Size
+## 🎨 Стилизация
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Цветовая палитра:
+```scss
+$primary: #F8E8E8;    // Пудровый розовый
+$secondary: #E8F4F8;  // Нежно-голубой
+$accent: #F0E8F8;     // Лавандовый
+$neutral: #F5F5F5;    // Светло-серый
+$text: #4A4A4A;       // Темно-серый
+```
 
-### Making a Progressive Web App
+### Особенности стилизации:
+- Комбинация Tailwind CSS и SCSS
+- Модульная структура стилей
+- Адаптивный дизайн
+- Анимации и переходы
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🧪 Тестирование
 
-### Advanced Configuration
+Проект включает тесты для основных компонентов:
+```bash
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Тестируемые компоненты:
+- Header
+- Footer
+- ContactForm
+- ServiceCard
+- ProductCard
 
-### Deployment
+## ⚡ Оптимизация
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Производительность:
+- Ленивая загрузка изображений
+- Оптимизация бандла
+- Кэширование статических ресурсов
+- Минификация CSS и JavaScript
 
-### `npm run build` fails to minify
+### SEO:
+- Мета-теги
+- Семантическая разметка
+- Оптимизация изображений
+- Структурированные данные
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 Лицензия
+
+Проект распространяется под лицензией MIT. Подробности в файле [LICENSE](LICENSE).
+
+---
+
+## 🤝 Вклад в проект
+
+Мы приветствуем вклад в развитие проекта! Если вы хотите внести свой вклад:
+
+1. Форкните репозиторий
+2. Создайте ветку для ваших изменений
+3. Внесите изменения
+4. Создайте Pull Request
+
+## 📞 Контакты
+
+По всем вопросам обращайтесь:
+- Email: [ваш email]
+- GitHub: [ваш профиль]
