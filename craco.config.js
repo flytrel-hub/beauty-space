@@ -1,9 +1,5 @@
 const path = require('path');
 
-// Добавляем логирование
-const logConfig = (config, level) => {
-  console.log(`[Webpack Config ${level}]`, JSON.stringify(config, null, 2));
-};
 
 module.exports = {
   webpack: {
@@ -15,12 +11,10 @@ module.exports = {
       '@assets': path.resolve(__dirname, 'src/assets')
     },
     configure: (webpackConfig) => {
-      // Логируем начальную конфигурацию
-      logConfig(webpackConfig, 'Initial');
+
 
       // Настройка для HashRouter
       webpackConfig.output.publicPath = '';
-      console.log('[HashRouter] Public path set to empty string');
       
       // Настройка для статических файлов
       webpackConfig.module.rules.push({
@@ -30,13 +24,11 @@ module.exports = {
           filename: 'static/media/[name].[hash][ext]'
         }
       });
-      console.log('[Static Files] Rules added for media files');
 
       // Оптимизация разделения кода
       webpackConfig.optimization = {
         ...webpackConfig.optimization,
       };
-      console.log('[Optimization] Basic optimization applied');
 
       // Оптимизация CSS
       webpackConfig.optimization.minimizer = webpackConfig.optimization.minimizer.map(minimizer => {
@@ -48,13 +40,10 @@ module.exports = {
               normalizeWhitespace: true,
             }],
           };
-          console.log('[CSS] Minimizer options updated');
         }
         return minimizer;
       });
 
-      // Логируем финальную конфигурацию
-      logConfig(webpackConfig, 'Final');
 
       return webpackConfig;
     },
@@ -73,7 +62,6 @@ module.exports = {
       if (!devServer) {
         throw new Error('webpack-dev-server is not defined');
       }
-      console.log('[DevServer] Listening on port 3000');
     }
   },
   style: {
