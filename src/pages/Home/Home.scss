@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+
+  @media (max-width: $breakpoint-md) {
+    gap: 4rem;
+    padding: 1rem 0;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    gap: 3rem;
+  }
+}

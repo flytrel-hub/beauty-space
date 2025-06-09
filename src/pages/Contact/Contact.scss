@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.contact-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h1 {
+    color: $text-primary;
+    text-align: center;
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "projectName": "BeautySpace",
+  "goal": "Создание многостраничного статического сайта для косметического салона без регистрации и покупок.",
+  "techStack": {
+    "frontend": [
+      "React",
+      "React Router",
+      "SCSS",
+      "Tailwind CSS"
+    ],
+    "libraries": [
+      "react-hook-form",
+      "framer-motion",
+      "react-icons",
+      "swiper"
+    ]
+  },
+  "colors": {
+    "primary": "#F8E8E8",
+    "secondary": "#E8F4F8",
+    "accent": "#F0E8F8",
+    "neutral": "#F5F5F5",
+    "text": "#4A4A4A"
+  },
+  "structure": {
+    "public": [
+      "images/",
+      "favicon.ico"
+    ],
+    "src": {
+      "components": [
+        "Header/",
+        "Footer/",
+        "ServiceCard/",
+        "ProductCard/",
+        "ContactForm/"
+      ],
+      "pages": [
+        "Home/",
+        "Services/",
+        "About/",
+        "Catalog/"
+      ],
+      "styles": [
+        "globals.scss",
+        "variables.scss"
+      ],
+      "data": [
+        "services.js",
+        "products.js"
+      ],
+      "core": [
+        "App.js"
+      ]
+    }
+  },
+  "tasks": [
+    {
+      "stage": "Инициализация",
+      "items": [
+        "Создать проект через create-react-app",
+        "Настроить Tailwind + SCSS",
+        "Добавить React Router и нужные библиотеки",
+        "Настроить цвета и глобальные стили"
+      ]
+    },
+    {
+      "stage": "Макет",
+      "items": [
+        "Создать Header и Footer",
+        "Адаптивная навигация",
+        "Обёртка Layout"
+      ]
+    },
+    {
+      "stage": "Главная страница",
+      "items": [
+        "Hero с CTA",
+        "Блок услуг (3-4)",
+        "Секция 'Почему мы'",
+        "Контактный блок"
+      ]
+    },
+    {
+      "stage": "Услуги",
+      "items": [
+        "Каталог услуг (15 позиций)",
+        "Фильтрация по категориям",
+        "Прайс-лист",
+        "Модальные окна"
+      ]
+    },
+    {
+      "stage": "Каталог косметики",
+      "items": [
+        "Карточки товаров",
+        "Фильтрация по бренду и типу",
+        "Только просмотр (без покупки)"
+      ]
+    },
+    {
+      "stage": "О нас",
+      "items": [
+        "История бренда",
+        "Команда",
+        "Сертификаты",
+        "Галерея (Swiper)"
+      ]
+    },
+    {
+      "stage": "Контакты",
+      "items": [
+        "Форма обратной связи с валидацией",
+        "Имитация отправки",
+        "Карта/адрес"
+      ]
+    },
+    {
+      "stage": "Финальная доработка",
+      "items": [
+        "Оптимизация",
+        "Проверка адаптивности",
+        "SEO-теги",
+        "Кроссбраузерность"
+      ]
+    }
+  ]
+}

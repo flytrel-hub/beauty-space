@@ -1,0 +1,103 @@
+@import '../../../styles/variables';
+
+.salon-gallery {
+  margin-top: 2.5rem;
+  padding: 0 1rem; // Add some padding on the sides
+  width: 100%; // Ensure container takes full width
+  overflow: hidden; // Hide any potential overflow from Swiper
+  height: 650px; /* Increased specific height for the gallery container to accommodate slides */
+
+  .swiper {
+    width: 100%; /* Ensure Swiper container takes full width */
+    height: 100%; /* Ensure Swiper container takes full height of its parent */
+    box-sizing: border-box; /* Ensure padding/border on .swiper are included in its total width/height */
+    .swiper-wrapper {
+      display: flex;
+      box-sizing: content-box;
+      /* Removed align-items: flex-end; as it's not needed for slidesPerView={1} */
+    }
+  }
+
+  .swiper-slide {
+    border-radius: $border-radius;
+    overflow: hidden;
+    box-shadow: $box-shadow-md;
+    display: flex; /* Use flexbox to center image if needed */
+    justify-content: center;
+    align-items: center;
+    width: auto; /* Allow Swiper/CSS to determine width */
+    height: 550px; /* Increased specific height for the slide */
+    margin-bottom: 80px; /* Further increased bottom margin for the slide */
+    box-sizing: border-box; /* Ensure padding/border are included in element's total width and height */
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%; /* Make image take full height of the slide */
+    object-fit: cover; /* Ensure image covers the area without distortion */
+
+    &:hover {
+      /* Explicitly prevent transform on image hover */
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* Swiper pagination styles */
+  .swiper-pagination-bullet {
+    background-color: $olive-primary;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+
+    &-active {
+      opacity: 1;
+    }
+  }
+
+  /* Swiper navigation styles */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $text-primary; /* Changed default color for better visibility */
+    transition: color 0.3s ease;
+    &::after {
+      font-size: 2.5rem; /* Increased arrow size */
+    }
+
+    &:hover {
+      color: $olive-accent;
+    }
+
+    // Удаляем outline при фокусе, чтобы избежать розового бордера
+    &:focus {
+      outline: none;
+    }
+  }
+
+  /* Adjust navigation button position if needed */
+  .swiper-button-next {
+    right: 10px;
+  }
+
+  .swiper-button-prev {
+    left: 10px;
+  }
+
+  /* Hide navigation buttons on small screens if desired */
+  @media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+  }
+
+  // Стили для кнопок навигации внутри нашего Swiper
+  &.my-salon-swiper {
+    .swiper-button-next,
+    .swiper-button-prev {
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

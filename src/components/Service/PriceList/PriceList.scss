@@ -1,0 +1,200 @@
+.price-list {
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(255, 192, 203, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+  }
+}
+
+// Анимация появления строк таблицы
+tbody tr {
+  animation: fadeIn 0.3s ease-out;
+  animation-fill-mode: both;
+}
+
+@for $i from 1 through 20 {
+  tbody tr:nth-child(#{$i}) {
+    animation-delay: #{$i * 0.05}s;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Стили для таблицы
+table {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: white;
+}
+
+// Стили для заголовков категорий
+tr[class*='bg-primary/5'] {
+  td {
+    color: #4a4a4a;
+    font-weight: 600;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 192, 203, 0.3), transparent);
+    }
+  }
+}
+
+// Стили для кнопок фильтров
+.filters {
+  button {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition:
+        width 0.3s,
+        height 0.3s;
+    }
+
+    &:hover::after {
+      width: 200%;
+      height: 200%;
+    }
+  }
+}
+
+// Специальные стили для PDF версии
+.pdf-version {
+  // Отключаем анимации
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  // Убираем тени и эффекты
+  table {
+    box-shadow: none;
+  }
+
+  // Делаем текст более четким
+  td,
+  th {
+    color: #000 !important;
+    text-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  // Убираем hover эффекты
+  tr:hover {
+    background-color: transparent !important;
+  }
+
+  // Делаем фон категорий более темным для лучшей читаемости
+  tr[class*='bg-primary/5'] {
+    background-color: #f3f4f6 !important;
+    td {
+      color: #000 !important;
+    }
+  }
+
+  // Делаем цены более заметными
+  td:last-child {
+    color: #000 !important;
+    font-weight: 600 !important;
+  }
+
+  // Стили для PDF шапки
+  .pdf-header {
+    display: block !important;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-bottom: 2px solid #f3f4f6;
+
+    h1 {
+      color: #000 !important;
+      font-size: 24px !important;
+    }
+
+    p {
+      color: #4a5568 !important;
+    }
+  }
+
+  // Стили для PDF подвала
+  .pdf-footer {
+    display: block !important;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-top: 2px solid #f3f4f6;
+
+    h3 {
+      color: #000 !important;
+      font-size: 16px !important;
+    }
+
+    p {
+      color: #4a5568 !important;
+      font-size: 12px !important;
+    }
+
+    // Уменьшаем шрифт для режима работы в PDF
+    .flex > div:first-child p {
+      font-size: 12px !important;
+    }
+  }
+}
+
+// Адаптивность
+@media (max-width: 640px) {
+  .price-list {
+    padding: 1rem;
+  }
+
+  table {
+    font-size: 0.875rem;
+  }
+
+  td,
+  th {
+    padding: 0.75rem !important;
+  }
+
+  .price-list-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

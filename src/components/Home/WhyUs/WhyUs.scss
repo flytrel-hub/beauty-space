@@ -1,0 +1,67 @@
+@import '../../../styles/variables.scss';
+
+// Анимация появления
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+// Анимация для иконок
+@keyframes iconPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+[data-testid='advantage-icon'] {
+  transition: all 0.3s ease;
+
+  &:hover {
+    animation: iconPulse 1s ease-in-out;
+    background-color: darken($accent, 10%);
+  }
+}
+
+// Стили для карточек преимуществ
+.grid > div {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Адаптивные стили
+@media (max-width: $breakpoint-md) {
+  .grid {
+    gap: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  [data-testid='advantage-icon'] {
+    width: 3rem;
+    height: 3rem;
+  }
+}
