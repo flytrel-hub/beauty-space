@@ -6,6 +6,10 @@ import './ContactBlock.scss';
 const ContactBlock = () => {
   const { openModal } = useModal();
 
+  const handleOpenForm = () => {
+    openModal(); // Открываем форму без привязки к услуге
+  };
+
   return (
     <section className="py-16 px-4 bg-neutral" data-testid="contact-block">
       <div className="container mx-auto">
@@ -64,7 +68,7 @@ const ContactBlock = () => {
             <div className="mt-8">
               <button
                 className="inline-block w-full text-center bg-accent hover:bg-accent/90 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
-                onClick={openModal}
+                onClick={handleOpenForm}
               >
                 Записаться
               </button>

@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Modal from '../General/Modal/Modal';
 import './ContactFormModal.scss';
 
-const ContactFormModal = ({ isOpen, onClose }) => {
+const ContactFormModal = ({ isOpen, onClose, service }) => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     email: '',
-    service: '',
+    service: service?.name || '',
     message: '',
   });
 
@@ -17,6 +18,16 @@ const ContactFormModal = ({ isOpen, onClose }) => {
   const [progress, setProgress] = useState(0);
 
   console.log('Modal state: isSubmitting', isSubmitting, 'isSuccess', isSuccess);
+
+  useEffect(() => {
+    // Обновляем значение услуги при изменении пропса service
+    if (service?.name) {
+      setFormData(prev => ({
+        ...prev,
+        service: service.name
+      }));
+    }
+  }, [service]);
 
   useEffect(() => {
     let interval;
@@ -92,7 +103,7 @@ const ContactFormModal = ({ isOpen, onClose }) => {
         name: '',
         phone: '',
         email: '',
-        service: '',
+        service: service?.name || '',
         message: '',
       });
     } catch (error) {
@@ -115,7 +126,9 @@ const ContactFormModal = ({ isOpen, onClose }) => {
   return (
     <Modal isOpen={isOpen} onClose={handleClose}>
       <div className="contact-form-container">
-        <h2 className="contact-form-title">Записаться на услугу</h2>
+        <h2 className="contact-form-title">
+          {service ? 'Записаться на услугу' : 'Связаться с нами'}
+        </h2>
 
         {isSuccess ? (
           <div className="contact-form-success">
@@ -183,17 +196,34 @@ const ContactFormModal = ({ isOpen, onClose }) => {
               {errors.email && <span className="error-message">{errors.email}</span>}
             </div>
 
-            <div className="form-group">
-              <label htmlFor="service">Услуга</label>
-              <select id="service" name="service" value={formData.service} onChange={handleChange}>
-                <option value="">Выберите услугу</option>
-                <option value="manicure">Маникюр</option>
-                <option value="pedicure">Педикюр</option>
-                <option value="makeup">Макияж</option>
-                <option value="haircut">Стрижка</option>
-                <option value="coloring">Окрашивание</option>
-              </select>
-            </div>
+            {service ? (
+              <div className="form-group">
+                <label>Выбранная услуга</label>
+                <input
+                  type="text"
+                  value={service.name}
+                  disabled
+                  className="disabled"
+                />
+              </div>
+            ) : (
+              <div className="form-group">
+                <label htmlFor="service">Услуга</label>
+                <select 
+                  id="service" 
+                  name="service" 
+                  value={formData.service} 
+                  onChange={handleChange}
+                >
+                  <option value="">Выберите услугу</option>
+                  <option value="manicure">Маникюр</option>
+                  <option value="pedicure">Педикюр</option>
+                  <option value="makeup">Макияж</option>
+                  <option value="haircut">Стрижка</option>
+                  <option value="coloring">Окрашивание</option>
+                </select>
+              </div>
+            )}
 
             <div className="form-group">
               <label htmlFor="message">Сообщение</label>
@@ -228,6 +258,14 @@ const ContactFormModal = ({ isOpen, onClose }) => {
       </div>
     </Modal>
   );
+};
+
+ContactFormModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  service: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }),
 };
 
 export default ContactFormModal;

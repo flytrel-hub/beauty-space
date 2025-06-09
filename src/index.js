@@ -15,14 +15,18 @@ window.addEventListener('error', (event) => {
 });
 
 const Root = () => {
-  const { isModalOpen, closeModal } = useModal();
+  const { isModalOpen, closeModal, selectedService } = useModal();
 
   return (
     <React.StrictMode>
       <HashRouter>
         <HelmetProvider>
           <App />
-          <ContactFormModal isOpen={isModalOpen} onClose={closeModal} />
+          <ContactFormModal 
+            isOpen={isModalOpen} 
+            onClose={closeModal} 
+            service={selectedService}
+          />
         </HelmetProvider>
       </HashRouter>
     </React.StrictMode>
