@@ -10,10 +10,10 @@ module.exports = {
       '@assets': path.resolve(__dirname, 'src/assets')
     },
     configure: (webpackConfig) => {
-      // Настройка для HashRouter и GitHub Pages
-      webpackConfig.output.publicPath = process.env.NODE_ENV === 'production' 
-        ? '/beauty-space/'
-        : '/';
+      // В режиме разработки используем корневой путь
+      if (process.env.NODE_ENV === 'development') {
+        webpackConfig.output.publicPath = '/';
+      }
 
       // Удаляем source-map-loader из правил
       webpackConfig.module.rules = webpackConfig.module.rules.filter(rule => {
@@ -94,8 +94,17 @@ module.exports = {
   devServer: {
     port: 3000,
     hot: true,
-    open: true,
-    historyApiFallback: true,
+    open: {
+      target: ['http://localhost:3000'],
+      app: {
+        name: process.platform === 'win32' ? 'chrome' : 'google-chrome'
+      }
+    },
+    historyApiFallback: {
+      rewrites: [
+        { from: /^\/beauty-space\/index\.html$/, to: '/beauty-space/' }
+      ]
+    },
     static: {
       directory: path.join(__dirname, 'public'),
     },

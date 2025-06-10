@@ -142,17 +142,33 @@ button {
 }
 
 .header-button {
-  background-color: #4299e1;
-  color: white;
-  padding: 0.5rem 1rem;
+  background-color: $primary-dark;
+  color: $background;
+  padding: 8px 25px;
   border: none;
-  border-radius: 0.5rem;
-  font-weight: 500;
+  border-radius: 25px;
+  font-size: $font-size-base;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: $transition-normal;
+  min-width: 40px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  &:hover {
-    background-color: #3182ce;
+  &:hover:not(:disabled) {
+    background-color: darken($primary-dark, 5%);
+    transform: translateY(-1px);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    background-color: $text-secondary;
+    cursor: not-allowed;
   }
 }
 

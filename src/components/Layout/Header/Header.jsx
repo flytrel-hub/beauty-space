@@ -72,7 +72,7 @@ const Header = memo(() => {
             {/* Кнопка записи для десктопа */}
             <button
               onClick={handleOpenForm}
-              className="bg-accent hover:bg-accent/90 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105"
+              className="header-button"
             >
               Записаться
             </button>
@@ -160,7 +160,7 @@ const Header = memo(() => {
             <li className="px-4 py-2">
               <button
                 onClick={handleOpenForm}
-                className="block w-full text-center bg-accent hover:bg-accent/90 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300"
+                className="header-button w-full"
               >
                 Записаться
               </button>

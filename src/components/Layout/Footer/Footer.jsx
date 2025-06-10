@@ -1,8 +1,26 @@
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { FaInstagram, FaTelegram, FaVk, FaPinterest, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 import './Footer.scss';
 
 const Footer = memo(() => {
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    mode: 'onChange'
+  });
+
+  const onSubmit = async (data) => {
+    try {
+      // Здесь будет логика отправки данных на сервер
+      console.log('Подписка оформлена:', data);
+      setIsSubscribed(true);
+      reset();
+      setTimeout(() => setIsSubscribed(false), 3000);
+    } catch (error) {
+      console.error('Ошибка при подписке:', error);
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -79,16 +97,39 @@ const Footer = memo(() => {
             <div className="footer__newsletter">
               <h4 className="footer__subtitle">Подпишитесь на новости</h4>
               <p className="footer__text">Будьте в курсе наших акций и новинок</p>
-              <form className="footer__form">
-                <input
-                  type="email"
-                  placeholder="Ваш email"
-                  className="footer__input"
-                  aria-label="Email для подписки"
-                />
-                <button type="submit" className="footer__button">
-                  Подписаться
-                </button>
+              <form className="footer__form" onSubmit={handleSubmit(onSubmit)}>
+                <div className="footer__form-group">
+                  <div className="footer__input-wrapper">
+                    <input
+                      type="email"
+                      placeholder="Ваш email"
+                      className={`footer__input ${errors.email ? 'footer__input--error' : ''}`}
+                      aria-label="Email для подписки"
+                      {...register('email', {
+                        required: 'Email обязателен',
+                        pattern: {
+                          value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                          message: 'Некорректный email'
+                        },
+                        validate: value => {
+                          if (!value.includes('@')) return 'Email должен содержать @';
+                          if (!value.includes('.')) return 'Email должен содержать домен';
+                          return true;
+                        }
+                      })}
+                    />
+                    {errors.email && (
+                      <span className="footer__error">{errors.email.message}</span>
+                    )}
+                  </div>
+                  <button 
+                    type="submit" 
+                    className="footer__button"
+                    disabled={isSubscribed || errors.email}
+                  >
+                    {isSubscribed ? '✓' : '→'}
+                  </button>
+                </div>
               </form>
             </div>
           </div>

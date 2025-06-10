@@ -2,7 +2,7 @@
   "name": "beauty-space",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://flytrel-hub.github.io/beauty-space",
+  "homepage": ".",
   "dependencies": {
     "framer-motion": "^12.16.0",
     "html2canvas": "^1.4.1",
