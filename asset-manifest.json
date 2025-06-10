@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/beauty-space/static/css/main.081de7ef.css",
-    "main.js": "/beauty-space/static/js/main.a4087126.js",
+    "main.css": "/beauty-space/static/css/main.ace8f5bc.css",
+    "main.js": "/beauty-space/static/js/main.1273cdaf.js",
     "static/js/977.96cd72f3.chunk.js": "/beauty-space/static/js/977.96cd72f3.chunk.js",
     "static/js/455.f959b438.chunk.js": "/beauty-space/static/js/455.f959b438.chunk.js",
     "images/photo-1634449571010-02389ed0f9b0.jpg": "/beauty-space/images/photo-1634449571010-02389ed0f9b0.jpg",
@@ -28,13 +28,13 @@
     "images/photo-1746904305806-a9ce08b33dc2.jpg": "/beauty-space/images/photo-1746904305806-a9ce08b33dc2.jpg",
     "favicon.ico": "/beauty-space/favicon.ico",
     "index.html": "/beauty-space/index.html",
-    "main.081de7ef.css.map": "/beauty-space/static/css/main.081de7ef.css.map",
-    "main.a4087126.js.map": "/beauty-space/static/js/main.a4087126.js.map",
+    "main.ace8f5bc.css.map": "/beauty-space/static/css/main.ace8f5bc.css.map",
+    "main.1273cdaf.js.map": "/beauty-space/static/js/main.1273cdaf.js.map",
     "977.96cd72f3.chunk.js.map": "/beauty-space/static/js/977.96cd72f3.chunk.js.map",
     "455.f959b438.chunk.js.map": "/beauty-space/static/js/455.f959b438.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.081de7ef.css",
-    "static/js/main.a4087126.js"
+    "static/css/main.ace8f5bc.css",
+    "static/js/main.1273cdaf.js"
   ]
 }
