@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { products } from '../../data/products';
 import ProductCard from '../../components/Product/ProductCard/ProductCard';
+import SEO from '../../components/General/SEO/SEO';
 import './ProductDetail.scss';
 
 const ProductDetail = () => {
@@ -53,57 +54,65 @@ const ProductDetail = () => {
   }
 
   return (
-    <div className="product-detail-page container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-quicksand font-bold text-textMain mb-8 inline-block relative">
-        {product.name}
-      </h1>
+    <>
+      <SEO 
+        title={product.name}
+        description={`${product.name} - ${product.description}`}
+        keywords={`${product.name}, ${product.brand}, ${product.category}, косметика, уход за собой`}
+        canonicalUrl={`https://beauty-salon.ru/products/${product.id}`}
+      />
+      <div className="product-detail-page container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-quicksand font-bold text-textMain mb-8 inline-block relative">
+          {product.name}
+        </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-        <div className="product-image-container">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-full h-auto rounded-lg shadow-md object-cover"
-            style={{ aspectRatio: '1 / 1' }}
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div className="product-image-container">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-auto rounded-lg shadow-md object-cover"
+              style={{ aspectRatio: '1 / 1' }}
+            />
+          </div>
+
+          <div className="product-info-container flex flex-col">
+            <p className="text-xl font-nunito font-semibold text-price mb-2">{product.brand}</p>
+            <p className="text-2xl font-quicksand font-bold text-textMain mb-6">{product.price} ₽</p>
+
+            <div className="mb-6 pb-4 border-b border-neutral">
+              <h2 className="text-xl font-quicksand font-semibold text-textMain mb-2">Описание</h2>
+              <p className="text-gray-700 font-nunito leading-relaxed">{product.fullDescription}</p>
+            </div>
+
+            <div className="mb-6 pb-4 border-b border-neutral">
+              <h2 className="text-xl font-quicksand font-semibold text-textMain mb-2">Состав</h2>
+              <p className="text-gray-700 font-nunito leading-relaxed">{product.composition}</p>
+            </div>
+
+            <div className="flex space-x-4 mt-auto">
+              <button
+                className="px-6 py-3 bg-secondary hover:bg-secondary-dark text-textMain rounded-md transition-colors duration-300 font-quicksand"
+                onClick={handleGoBack}
+              >
+                Вернуться в каталог
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div className="product-info-container flex flex-col">
-          <p className="text-xl font-nunito font-semibold text-price mb-2">{product.brand}</p>
-          <p className="text-2xl font-quicksand font-bold text-textMain mb-6">{product.price} ₽</p>
-
-          <div className="mb-6 pb-4 border-b border-neutral">
-            <h2 className="text-xl font-quicksand font-semibold text-textMain mb-2">Описание</h2>
-            <p className="text-gray-700 font-nunito leading-relaxed">{product.fullDescription}</p>
+        {similarProducts.length > 0 && (
+          <div className="mt-12">
+            <h2 className="text-2xl font-quicksand font-bold text-textMain mb-6">Похожие товары</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {similarProducts.map((similarProduct) => (
+                <ProductCard key={similarProduct.id} product={similarProduct} />
+              ))}
+            </div>
           </div>
-
-          <div className="mb-6 pb-4 border-b border-neutral">
-            <h2 className="text-xl font-quicksand font-semibold text-textMain mb-2">Состав</h2>
-            <p className="text-gray-700 font-nunito leading-relaxed">{product.composition}</p>
-          </div>
-
-          <div className="flex space-x-4 mt-auto">
-            <button
-              className="px-6 py-3 bg-secondary hover:bg-secondary-dark text-textMain rounded-md transition-colors duration-300 font-quicksand"
-              onClick={handleGoBack}
-            >
-              Вернуться в каталог
-            </button>
-          </div>
-        </div>
+        )}
       </div>
-
-      {similarProducts.length > 0 && (
-        <div className="mt-12">
-          <h2 className="text-2xl font-quicksand font-bold text-textMain mb-6">Похожие товары</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {similarProducts.map((similarProduct) => (
-              <ProductCard key={similarProduct.id} product={similarProduct} />
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
+    </>
   );
 };
 

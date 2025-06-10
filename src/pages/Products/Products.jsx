@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ProductCard from '../../components/Product/ProductCard/ProductCard';
 import { products } from '../../data/products';
+import SEO from '../../components/General/SEO/SEO';
 import './Products.scss';
 
 const Products = () => {
@@ -26,6 +27,12 @@ const Products = () => {
 
   return (
     <div className="products-page">
+      <SEO 
+        title="Каталог косметики"
+        description="Широкий выбор профессиональной косметики для ухода за лицом, телом и волосами. Только оригинальные товары от ведущих брендов с доставкой по всей России."
+        keywords="профессиональная косметика, уход за лицом, уход за телом, уход за волосами, косметические бренды, каталог косметики"
+        canonicalUrl="https://beauty-salon.ru/products"
+      />
       <div className="container">
         <h1 className="products-page__title font-nunito font-bold text-3xl md:text-4xl">Каталог косметики</h1>
 
