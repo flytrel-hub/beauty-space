@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/beauty-space/static/css/main.ace8f5bc.css",
-    "main.js": "/beauty-space/static/js/main.1273cdaf.js",
+    "main.js": "/beauty-space/static/js/main.a80ef4ea.js",
     "static/js/977.96cd72f3.chunk.js": "/beauty-space/static/js/977.96cd72f3.chunk.js",
     "static/js/455.f959b438.chunk.js": "/beauty-space/static/js/455.f959b438.chunk.js",
     "images/photo-1634449571010-02389ed0f9b0.jpg": "/beauty-space/images/photo-1634449571010-02389ed0f9b0.jpg",
@@ -29,12 +29,12 @@
     "favicon.ico": "/beauty-space/favicon.ico",
     "index.html": "/beauty-space/index.html",
     "main.ace8f5bc.css.map": "/beauty-space/static/css/main.ace8f5bc.css.map",
-    "main.1273cdaf.js.map": "/beauty-space/static/js/main.1273cdaf.js.map",
+    "main.a80ef4ea.js.map": "/beauty-space/static/js/main.a80ef4ea.js.map",
     "977.96cd72f3.chunk.js.map": "/beauty-space/static/js/977.96cd72f3.chunk.js.map",
     "455.f959b438.chunk.js.map": "/beauty-space/static/js/455.f959b438.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ace8f5bc.css",
-    "static/js/main.1273cdaf.js"
+    "static/js/main.a80ef4ea.js"
   ]
 }
