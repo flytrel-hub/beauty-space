@@ -100,11 +100,7 @@ module.exports = {
         name: process.platform === 'win32' ? 'chrome' : 'google-chrome'
       }
     },
-    historyApiFallback: {
-      rewrites: [
-        { from: /^\/beauty-space\/index\.html$/, to: '/beauty-space/' }
-      ]
-    },
+    historyApiFallback: true,
     static: {
       directory: path.join(__dirname, 'public'),
     },
