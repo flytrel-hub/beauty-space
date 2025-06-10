@@ -26,7 +26,7 @@ const Header = memo(() => {
           {/* Логотип */}
           <Link
             to="/"
-            className="text-xl md:text-2xl logo font-bold text-textMain hover:text-primary-dark transition-colors"
+            className="text-xl md:text-3xl lg:text-4xl logo font-bold text-textMain hover:text-primary-dark transition-colors"
             aria-label="BeautySpace - Главная страница"
           >
             BeautySpace

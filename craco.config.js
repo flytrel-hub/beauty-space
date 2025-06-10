@@ -15,12 +15,28 @@ module.exports = {
         ? '/beauty-space/'
         : '/';
 
+      // Удаляем source-map-loader из правил
+      webpackConfig.module.rules = webpackConfig.module.rules.filter(rule => {
+        if (rule.use && Array.isArray(rule.use)) {
+          rule.use = rule.use.filter(use => {
+            if (typeof use === 'string') {
+              return use !== 'source-map-loader';
+            }
+            if (use.loader) {
+              return use.loader !== 'source-map-loader';
+            }
+            return true;
+          });
+        }
+        return true;
+      });
+
       // Настройка для статических файлов
       webpackConfig.module.rules.push({
         test: /\.(png|jpe?g|gif|svg|ico)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'static/media/[name].[hash][ext]'
+          filename: 'static/media/[name][ext]'
         }
       });
 
@@ -79,16 +95,13 @@ module.exports = {
     port: 3000,
     hot: true,
     open: true,
-    historyApiFallback: {
-      disableDotRule: true,
-      rewrites: [
-        { from: /^\//, to: '/index.html' }
-      ]
+    historyApiFallback: true,
+    static: {
+      directory: path.join(__dirname, 'public'),
     },
-    onListening: function(devServer) {
-      if (!devServer) {
-        throw new Error('webpack-dev-server is not defined');
-      }
+    compress: true,
+    client: {
+      overlay: true,
     }
   },
   style: {
@@ -98,4 +111,4 @@ module.exports = {
       }
     }
   }
-}; 
+};
